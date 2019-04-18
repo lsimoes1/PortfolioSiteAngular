@@ -1,39 +1,41 @@
 <div class="container">
-  <div>
-
-    <figure class="figure">
-        <img src="../assets/examples.jpg" class="figure-img img-fluid rounded" alt="...">
-    </figure>
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm ">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-        <a class="navbar-brand" routerLink="/home">Luan Simões</a>
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" routerLink="/work">Experiência Profissional <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" onclick="teste()">Info Acadêmica</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="#">Cursos</a>
+  <div class="row">
+    <div class="col-xl-3">
+      <figure class="figure">
+          <img src="../assets/examples.jpg" class="figure-img img-fluid rounded" alt="...">
+      </figure>
+    </div>
+    <div class="col-xl-9">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm ">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" routerLink="/home">Luan Simões</a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/work">Experiência Profissional <span class="sr-only">(current)</span></a>
             </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Projetos</a>
-          </li>
-        </ul>
+            <li class="nav-item">
+              <a class="nav-link" onclick="teste()">Info Acadêmica</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Cursos</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Projetos</a>
+            </li>
+          </ul>
 
-      </div>
-    </nav>
-
+        </div>
+      </nav>
+    </div>
+  </div>
     <div class="card shadow p-3 mb-5 bg-white rounded">
       <div class="card-body">
           <router-outlet></router-outlet>
       </div>
     </div>
-  </div>
+  
 </div>
 
