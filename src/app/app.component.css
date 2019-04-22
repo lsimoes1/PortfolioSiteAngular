@@ -49,6 +49,7 @@ div > .card-body {
 
 .list-icons{
     width: 5%;
+    text-align: center;
 }
 
 .list-icons > a{
