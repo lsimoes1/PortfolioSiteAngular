@@ -16,8 +16,6 @@ figure > .figure-img {
     width: 100px;
     z-index: 1;
     left: 10%;
-    /* top: 4.5em; */
-    position: absolute;
 }
 
 div > .card-body {
