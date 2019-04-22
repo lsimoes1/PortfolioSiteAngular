@@ -25,6 +25,7 @@ div > .card-body {
 
 .nav-item {
     size:10%;
+    font-family: 'Orbitron', sans-serif;
 }
 
 @media (max-width: 768px) {
@@ -46,17 +47,17 @@ div > .card-body {
         margin-top: 5em;
     }
 }
-
+.list-icons > a {
+    color: white;
+}
 .list-icons{
     width: 5%;
     text-align: center;
-}
-
-.list-icons > a{
-    font-size: 20px;
+    color: white;
+    font-size: 23px;
     transition: .3s;
 }
 
-.list-icons > a:hover{
+.list-icons:hover{
     font-size: 27px;
 }

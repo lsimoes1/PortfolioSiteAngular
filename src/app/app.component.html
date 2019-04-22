@@ -11,33 +11,34 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a class="navbar-brand" routerLink="/home">Luan Simões</a>
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" routerLink="/work">Experiência Profissional <span class="sr-only">(current)</span></a>
+              <a class="nav-link" routerLink="/home" routerLinkActive="active">Luan Simões</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" onclick="teste()">Info Acadêmica</a>
+              <a class="nav-link" routerLink="/work" routerLinkActive="active">Experiência Profissional</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Cursos</a>
+              <a class="nav-link" onclick="teste()" routerLinkActive="active">Info Acadêmica</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" routerLinkActive="active">Cursos</a>
               </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Projetos</a>
+              <a class="nav-link" href="#" routerLinkActive="active">Projetos</a>
             </li>
           </ul>
           <div class="list-icons">
-              <a href="https://www.linkedin.com/in/devlsimoes/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+              <a href="https://www.linkedin.com/in/devlsimoes/" target="_blank"><fa name="linkedin"></fa></a>   
           </div>
           <div class="list-icons">
-              <a href="https://github.com/lsimoes1" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://github.com/lsimoes1" target="_blank"><fa name="github"></fa></a>  
           </div>
-          
         </div>
       </nav>
     </div>
   </div>
-    <div class="card shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="card shadow-sm p-3 mb-5  rounded">
       <div class="card-body">
           <router-outlet></router-outlet>
       </div>
