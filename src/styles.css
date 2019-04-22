@@ -1,14 +1,27 @@
-/* You can add global styles to this file, and also import other style files */
+html {
+    overflow-y: scroll;
+  }
+  body::-webkit-scrollbar {
+    width: 1em;
+  }
+  body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+  body::-webkit-scrollbar-thumb {
+    background-color: rgb(77, 77, 77);
+    outline: 1px solid rgb(163, 167, 170);
+  }
+
 body {
     /* background-color: lightgray; */
     background-image: url("../src/assets/back.jpeg");
 }
 
 .fadeIn {
-    -webkit-animation: fadeIn 0.4s ease-in-out;
-    -moz-animation: fadeIn 0.4s ease-in-out;
-    -o-animation: fadeIn 0.4s ease-in-out;
-    animation: fadeIn 0.4s ease-in-out;
+    -webkit-animation: fadeIn 0.5s ease-in-out;
+    -moz-animation: fadeIn 0.5s ease-in-out;
+    -o-animation: fadeIn 0.5s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
     }
 
 @-webkit-keyframes fadeIn {

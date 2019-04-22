@@ -46,3 +46,16 @@ div > .card-body {
         margin-top: 5em;
     }
 }
+
+.list-icons{
+    width: 5%;
+}
+
+.list-icons > a{
+    font-size: 20px;
+    transition: .3s;
+}
+
+.list-icons > a:hover{
+    font-size: 27px;
+}
