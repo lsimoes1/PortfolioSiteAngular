@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    background-color: lightgray;
+    /* background-color: lightgray; */
+    background-image: url("../src/assets/back.jpeg");
 }
-
 
 .fadeIn {
     -webkit-animation: fadeIn 0.4s ease-in-out;
