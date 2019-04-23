@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { WorkComponent } from './work/work.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AcademyComponent } from './academy/academy.component';
-import { CourseComponent } from './course/course.component';
 import { ProjectComponent } from './project/project.component';
 
 @NgModule({
@@ -16,7 +15,6 @@ import { ProjectComponent } from './project/project.component';
     HomeComponent,
     WorkComponent,
     AcademyComponent,
-    CourseComponent,
     ProjectComponent
   ],
   imports: [
