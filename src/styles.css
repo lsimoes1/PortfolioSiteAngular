@@ -24,6 +24,10 @@ body {
     animation: fadeIn 0.5s ease-in-out;
     }
 
+.text {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-size: 1.3em;
+}
 @-webkit-keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; } 
