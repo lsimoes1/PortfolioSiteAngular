@@ -38,14 +38,13 @@ div > .card-body {
     }
 
     figure > .figure-img {
-        width: 100px;
-        left: 10px;
-        top: -70px;
+        display: none;
     }
 
     .container{
         margin-top: 5em;
     }
+
 }
 .list-icons > a {
     color: white;
