@@ -9,6 +9,14 @@ div > .navbar {
     border-radius: 10px 10px 10px 10px;
 }
 
+div > .card {
+    margin-bottom: 2em;
+}
+
+div .card, .navbar {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .9);
+}
+
 div > .card-body {
     z-index: 0;
     padding-top: 5em;
@@ -33,7 +41,7 @@ div > .card-body {
     }
 
     .container{
-        margin-top: 5em;
+        margin-top: 1em;
     }
 
 }
