@@ -5,3 +5,12 @@
 ul {
     list-style-type: none; 
 }
+
+.separete {
+    border-bottom: solid;
+    border-color: black;
+    border-bottom-width: 1px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    max-width: 90%;
+}

@@ -1,21 +1,20 @@
 
 .container{
-    margin-top: 5em;
+    margin-top: 2em;
 }
 
 div > .navbar {
-    /* width: 80%; */
-    /* height: 30%; */
     top: 1.5em;
-    right: 10%;
     z-index: 1;
     border-radius: 10px 10px 10px 10px;
 }
 
-figure > .figure-img {
-    width: 100px;
-    z-index: 1;
-    left: 10%;
+div > .card {
+    margin-bottom: 2em;
+}
+
+div .card, .navbar {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .9);
 }
 
 div > .card-body {
@@ -28,6 +27,11 @@ div > .card-body {
     font-family: 'Orbitron', sans-serif;
 }
 
+.nav-link{
+    transition: .5s;
+}
+
+
 @media (max-width: 768px) {
     div > .navbar {
         /* width: 80%; */
@@ -38,14 +42,13 @@ div > .card-body {
     }
 
     figure > .figure-img {
-        width: 100px;
-        left: 10px;
-        top: -70px;
+        display: none;
     }
 
     .container{
-        margin-top: 5em;
+        margin-top: 1em;
     }
+
 }
 .list-icons > a {
     color: white;
