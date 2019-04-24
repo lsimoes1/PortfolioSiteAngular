@@ -9,7 +9,7 @@
     margin-bottom: 1em;
 }
 .card:hover {
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, .4);
+    box-shadow: 1px 1px 9px 1px rgba(0, 0, 0, .6);
 }
 .container {
     margin: 1em;
