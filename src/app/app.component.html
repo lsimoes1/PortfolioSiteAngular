@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row justify-content-md-center">
-    <div class="col-xl-9 col-sm-12 col-md-12 col-12">
+    <div class="col-xl-10 col-sm-12 col-md-12 col-12">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -19,12 +19,35 @@
             <li class="nav-item">
               <a class="nav-link" routerLink="/project" routerLinkActive="active">Projetos</a>
             </li>
+            <li class="nav-item dropdown d-xs-none d-sm-none d-lg-block ">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Contato
+                </a>
+                <div class="dropdown-menu fadeIn" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">
+                      <a href="https://www.linkedin.com/in/devlsimoes/" target="_blank"><fa name="linkedin"></fa></a>
+                      <span>Likedin</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                      <a href="https://github.com/lsimoes1" target="_blank"><fa name="github"></fa></a>
+                    <span>GitHub</span>
+                  </a>
+                  <a class="dropdown-item" href="#">
+                      <a href="https://github.com/lsimoes1" target="_blank"><fa name="facebook"></fa></a>
+                    <span>facebook</span>
+                  </a>
+                  <!-- <div class="dropdown-divider"></div> -->
+                  <!-- <a class="dropdown-item" href="#">Something else here</a> -->
+                </div>
+            </li>
           </ul>
-          <div class="list-icons">
-              <a href="https://www.linkedin.com/in/devlsimoes/" target="_blank"><fa name="linkedin"></fa></a>   
-          </div>
-          <div class="list-icons">
-              <a href="https://github.com/lsimoes1" target="_blank"><fa name="github"></fa></a>  
+          <div class="row ">
+            <div class="list-icons d-lg-none col-xl-6 col-md-6 col-sm-6 col-6">
+                <a href="https://www.linkedin.com/in/devlsimoes/" data-toggle="tooltip" data-placement="top" title="Visite o meu Linkedin" target="_blank"><fa name="linkedin"></fa></a>   
+            </div>
+            <div class="list-icons d-lg-none  col-xl-6 col-md-6 col-sm-6 col-6">
+                <a href="https://github.com/lsimoes1" target="_blank"><fa name="github"></fa></a>  
+            </div>
           </div>
         </div>
       </nav>

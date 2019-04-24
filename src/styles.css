@@ -31,7 +31,7 @@ body {
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     body {
       /* background-color: lightgray; */
       background: url("../src/assets/back5.jpg") no-repeat fixed;

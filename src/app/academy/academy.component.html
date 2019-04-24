@@ -7,10 +7,10 @@
     <div class="card-body">
       <blockquote class="blockquote mb-0">
         <div class="row">
-          <div class="col-xl-1 col-4">
+          <div class="col-xl-1 col-md-2 col-sm-2 col-4">
             <img class="" src="./assets/unip.jpg" alt="Generic placeholder image">
           </div>
-          <div class="col-xl-11 col-8">
+          <div class="col-xl-11 col-md-9 col-sm-9 col-8">
             <p>Unip - Universidade Paulista</p>
             <footer class="blockquote-footer">Análise e Desenvolvimento de Sistemas
               <br> <cite title="Source Title">Jul2017 - Jul/2019</cite></footer>
@@ -27,13 +27,13 @@
     </div>
     <div class="card-body">
       <div class="row" >
-        <div class="col-xl-6 col-12" *ngFor="let item of cursos">
+        <div class="col-xl-6 col-md-6 col-sm-6 col-12" *ngFor="let item of cursos">
           <blockquote class="blockquote mb-0">
             <div class="row separete" >
-              <div class="col-xl-2 col-4" >
+              <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
                 <img class="" src={{item.imagem}} alt="Generic placeholder image">
               </div>
-              <div class="col-xl-10 col-8">
+              <div class="col-xl-10 col-md-9 col-sm-9 col-8">
                 <p> {{ item.Nome }} </p>
                 <footer class="blockquote-footer"> {{ item.periodo }}
                   <br>

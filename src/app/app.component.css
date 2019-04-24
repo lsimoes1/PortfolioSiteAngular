@@ -31,6 +31,10 @@ div > .card-body {
     transition: .5s;
 }
 
+.div-contatos{
+    display: none;
+}
+
 
 @media (max-width: 768px) {
     div > .navbar {
@@ -49,18 +53,21 @@ div > .card-body {
         margin-top: 1em;
     }
 
+    .div-contatos {
+        display: block;
+    }
+    .div-menu {
+        display: none;
+    }
+    
+
 }
 .list-icons > a {
     color: white;
 }
 .list-icons{
-    width: 5%;
+
     text-align: center;
     color: white;
     font-size: 23px;
-    transition: .3s;
-}
-
-.list-icons:hover{
-    font-size: 27px;
 }
