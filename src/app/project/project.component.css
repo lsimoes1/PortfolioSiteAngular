@@ -1,4 +1,16 @@
 
-.card-deck {
-    width: 80%;
+.card-img {
+    width: 60%;
+    margin-top: 2%;
+}
+
+.card {
+    transition: .5s;
+    margin-bottom: 1em;
+}
+.card:hover {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .4);
+}
+.container {
+    margin: 1em;
 }

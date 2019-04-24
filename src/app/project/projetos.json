@@ -1,0 +1,40 @@
+{
+    "projetos": [
+        {
+            "titulo": "Portfólio",
+            "descricao": "Site desenvolvido em Angular, utilizando o framework Bootstrap.",
+            "imagem": "./assets/angular.png",
+            "url": "https://github.com/lsimoes1/PortfolioSiteAngular"
+        },
+        {
+            "titulo": "Portfólio",
+            "descricao": "Site desenvolvido para prática em HTML, CSS e JavaScript, utilizando os frameworks Materialize, Jquery e Animated.",
+            "imagem": "./assets/html.png",
+            "url": "https://github.com/lsimoes1/PortfolioSite"
+        },
+        {
+            "titulo": "Locação de automóveis",
+            "descricao": "Sistema de locação de automóveis em trabalho semestral da faculdade. Projeto desenvolvido em C.",
+            "imagem": "./assets/cmais.png",
+            "url": "https://github.com/lsimoes1/unipPim2017"
+        },
+        {
+            "titulo": "ServiceDesk",
+            "descricao": "Sistema de ServiceDesk desenvolvido em Asp.Net com integração ao banco de dados Sql Server. Foi utilizado os framework Materialize e Animated.",
+            "imagem": "./assets/aspnet.png",
+            "url": "https://github.com/lsimoes1/ServiceDesk"
+        },
+        {
+            "titulo": "My Game List",
+            "descricao": "Site desenvolvido em Angular com o propósito de ....",
+            "imagem": "./assets/angular.png",
+            "url": "https://github.com/lsimoes1/MyGameList"
+        },
+        {
+            "titulo": "Api CRUD",
+            "descricao": "Projeto em andamento desenvolvido para estudos. Aplicação que fará inclusão na base de dados MongoDB.",
+            "imagem": "./assets/netcore.png",
+            "url": "https://github.com/lsimoes1/DotNetCoreFormCadAPI"
+        }
+    ]
+}
