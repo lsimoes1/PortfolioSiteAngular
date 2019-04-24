@@ -14,7 +14,8 @@ html {
 
 body {
     /* background-color: lightgray; */
-    background-image: url("../src/assets/back.jpeg");
+    background: url("../src/assets/back5.jpg") center center no-repeat fixed;
+    background-size: 100%;
 }
 
 .fadeIn {
