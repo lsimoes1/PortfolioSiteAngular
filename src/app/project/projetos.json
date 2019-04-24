@@ -35,6 +35,12 @@
             "descricao": "Projeto em andamento desenvolvido para estudos. Aplicação que fará inclusão na base de dados MongoDB.",
             "imagem": "./assets/netcore.png",
             "url": "https://github.com/lsimoes1/DotNetCoreFormCadAPI"
+        },       
+        {
+            "titulo": "Formulário de Cadastro",
+            "descricao": "Página desenvolvida em Angular para consumir o projeto 'Api CRUD' que realizará os cadastro no banco.",
+            "imagem": "./assets/angular.png",
+            "url": "https://github.com/lsimoes1/AngularFormCadWEB"
         }
     ]
 }
