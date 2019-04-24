@@ -29,6 +29,16 @@ body {
   font-family: 'Yanone Kaffeesatz', sans-serif;
   font-size: 1.3em;
 }
+
+
+@media (max-width: 768px) {
+    body {
+      /* background-color: lightgray; */
+      background: url("../src/assets/back5.jpg") no-repeat fixed;
+      background-size: cover;
+  }
+}
+
 @-webkit-keyframes fadeIn {
     0% { opacity: 0; }
     100% { opacity: 1; } 
