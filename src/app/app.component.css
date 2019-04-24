@@ -34,7 +34,9 @@ div > .card-body {
 .div-contatos{
     display: none;
 }
-
+.dropdown-item > a{
+    margin-right: 1em;
+}
 
 @media (max-width: 768px) {
     div > .navbar {
