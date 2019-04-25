@@ -2,7 +2,7 @@
     "projetos": [
         {
             "titulo": "Portfólio",
-            "descricao": "Site desenvolvido em Angular, utilizando o framework Bootstrap.",
+            "descricao": "Site desenvolvido em Angular, utilizando o framework Bootstrap. No caso, esse é o projeto deste próprio site.",
             "imagem": "./assets/angular.png",
             "url": "https://github.com/lsimoes1/PortfolioSiteAngular"
         },
@@ -14,25 +14,25 @@
         },
         {
             "titulo": "Locação de automóveis",
-            "descricao": "Sistema de locação de automóveis em trabalho semestral da faculdade. Projeto desenvolvido em C.",
+            "descricao": "Sistema de locação de automóveis em trabalho semestral da faculdade. Projeto desenvolvido em C, nele é possível realizar cadastros de usuários e locações de automóveis.",
             "imagem": "./assets/cmais.png",
             "url": "https://github.com/lsimoes1/unipPim2017"
         },
         {
             "titulo": "ServiceDesk",
-            "descricao": "Sistema de ServiceDesk desenvolvido em Asp.Net com integração ao banco de dados Sql Server. Foi utilizado os framework Materialize e Animated.",
+            "descricao": "Sistema de ServiceDesk desenvolvido em Asp.Net com integração ao banco de dados Sql Server. Foi utilizado os framework Materialize e Animated e suas funcionalidades são, abertura e encerramento de chamados para usuários com perfis de acessos diferentes.",
             "imagem": "./assets/aspnetsqlserver.png",
             "url": "https://github.com/lsimoes1/ServiceDesk"
         },
         {
             "titulo": "My Game List",
-            "descricao": "Site desenvolvido em Angular com o propósito de ....",
+            "descricao": "Site em desenvolvimento para estudos. O intúito é termos uma área onde salvamos nossos jogos preferidos, classificamos e até recomendamos a outros usuários.",
             "imagem": "./assets/angular.png",
             "url": "https://github.com/lsimoes1/MyGameList"
         },
         {
             "titulo": "Api CRUD",
-            "descricao": "Projeto em andamento desenvolvido para estudos. Aplicação que fará inclusão na base de dados MongoDB.",
+            "descricao": "Projeto em andamento desenvolvido para estudos. Essa aplicação fará inclusões, consultas e alterações em uma base de dados não relacional, MongoDB.",
             "imagem": "./assets/netcoremongo.png",
             "url": "https://github.com/lsimoes1/DotNetCoreFormCadAPI"
         },       

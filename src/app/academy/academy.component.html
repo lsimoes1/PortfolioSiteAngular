@@ -26,28 +26,87 @@
       Cursos
     </div>
     <div class="card-body">
-      <div class="row" >
-        <div class="col-xl-6 col-md-6 col-sm-6 col-12" *ngFor="let item of cursos">
-          <blockquote class="blockquote mb-0">
-            <div class="row separete" >
-              <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
-                <img class="" src={{item.imagem}} alt="Generic placeholder image">
-              </div>
-              <div class="col-xl-10 col-md-9 col-sm-9 col-8">
-                <p> {{ item.Nome }} </p>
-                <footer class="blockquote-footer"> {{ item.periodo }}
-                  <br>
-                  <cite title="Source Title"> 
-                    <a href= {{item.certificado}} target="_blank">
-                      Certificado
-                    </a>  
-                  </cite>
-                </footer>
-              </div>
+      <ul class="list-group list-group-flush">
+
+        <li class="list-group-item">
+          <h3>Tecnologia</h3>
+          <div class="row">
+            <div class="col-xl-6 col-md-6 col-sm-6 col-12" *ngFor="let item of cursosTI">
+              <blockquote class="blockquote mb-0">
+                <div class="row separete" >
+                  <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
+                    <img class="" src={{item.imagem}} alt="Generic placeholder image">
+                  </div>
+                  <div class="col-xl-10 col-md-9 col-sm-9 col-8">
+                    {{ item.Nome }} 
+                    <footer class="blockquote-footer" *ngIf="item.concluido; else cursando"> {{ item.periodo }} 
+                      <br> 
+                        <fa name="check" class="text-success"> </fa> Concluído
+                      <br>
+                      <cite title="Source Title"> 
+                        <a href= {{item.link}} target="_blank">
+                          Certificado
+                        </a>  
+                      </cite>
+                    </footer>
+                    <ng-template #cursando>
+                        <footer class="blockquote-footer">
+                            <fa name="book" class="text-warning"> </fa> Em Andamento 
+                            <br>
+                            <cite title="Source Title">
+                              <a href= {{item.link}} target="_blank">
+                                  Curso
+                                </a> 
+                            </cite>
+                        </footer> 
+                    </ng-template>
+                  </div>
+                </div>
+              </blockquote>
             </div>
-          </blockquote>
-        </div>
-      </div>
+          </div>
+        </li>
+
+        <li class="list-group-item">
+          <h3>Idiomas</h3>
+          <div class="row">
+            <div class="col-xl-6 col-md-6 col-sm-6 col-12" *ngFor="let item of cursosEstrangeiros">
+              <blockquote class="blockquote mb-0">
+                <div class="row separete" >
+                  <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
+                    <img class="" src={{item.imagem}} alt="Generic placeholder image">
+                  </div>
+                  <div class="col-xl-10 col-md-9 col-sm-9 col-8">
+                    {{ item.Nome }} 
+                    <footer class="blockquote-footer" *ngIf="item.concluido; else cursando"> {{ item.periodo }} 
+                      <br> 
+                        <fa name="check" class="text-success"> </fa> Concluído
+                      <br>
+                      <cite title="Source Title"> 
+                        <a href= {{item.link}} target="_blank">
+                          Certificado
+                        </a>  
+                      </cite>
+                    </footer>
+                    <ng-template #cursando>
+                        <footer class="blockquote-footer">
+                            <fa name="book" class="text-warning"> </fa> Em Andamento 
+                            <br>
+                            <cite title="Source Title">
+                              <a href= {{item.link}} target="_blank">
+                                  Curso
+                                </a> 
+                            </cite>
+                        </footer> 
+                    </ng-template>
+                  </div>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </li>
+        
+      </ul>
     </div>
   </div>
 </div>

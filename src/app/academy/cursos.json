@@ -1,52 +1,86 @@
 {
-    "cursos": [
+    "cursosEstrangeiros": [
+        {
+            "Nome": "Curso De Inglês Completo- Do Zero à Falante Avançado",
+            "periodo": "",
+            "link": "https://www.udemy.com/cursodeingles-iniciantes/",
+            "imagem": "./assets/udemy.png",
+            "concluido": 0
+        }
+    ],
+
+    "cursosTI": [
+        {
+            "Nome": "DevOps Essentials",
+            "periodo": "",
+            "link": "https://www.udemy.com/linux-academy-devops-essentials/",
+            "imagem": "./assets/udemy.png",
+            "concluido": 0
+        },
+
+        {
+            "Nome": "Angular 7 (formerly Angular 2) - The Complete Guide",
+            "periodo": "",
+            "link": "https://www.udemy.com/the-complete-guide-to-angular-2/",
+            "imagem": "./assets/udemy.png",
+            "concluido": 0
+        }, 
+
         {
             "Nome": "HTML5 E CSS3 II: Turbiando As Suas Páginas",
             "periodo": "Jun/2018 - Out/2018",
-            "certificado": "https://cursos.alura.com.br/certificate/lsimoes1/avancando-html-css",
-            "imagem": "./assets/alura.png"
+            "link": "https://cursos.alura.com.br/certificate/lsimoes1/avancando-html-css",
+            "imagem": "./assets/alura.png",
+            "concluido": 1
         }, 
 
         {
             "Nome": "C# I: Fundamentos da Linguagem",
             "periodo": "Maio/2018 - Maio/2018",
-            "certificado": "https://cursos.alura.com.br/user/lsimoes1/course/fundamentos-de-csharp/certificate",
-            "imagem": "./assets/alura.png"
+            "link": "https://cursos.alura.com.br/user/lsimoes1/course/fundamentos-de-csharp/certificate",
+            "imagem": "./assets/alura.png",
+            "concluido": 1
         }, 
 
         {   "Nome": "Design Patterns C# I: Boas Práticas de Programação",
             "periodo": "Dezembro/2017 - Janeiro/2018",
-            "certificado": "https://cursos.alura.com.br/user/lsimoes1/course/design-patterns-dotnet/certificate",
-            "imagem": "./assets/alura.png"
+            "link": "https://cursos.alura.com.br/user/lsimoes1/course/design-patterns-dotnet/certificate",
+            "imagem": "./assets/alura.png",
+            "concluido": 1
         },
 
         {   "Nome": "HTML5 e CSS3 I",
             "periodo": "Dezembro/2017 - Janeiro/2018",
-            "certificado": "https://cursos.alura.com.br/certificate/9135bc6b-be69-4f37-b746-4e8ce9eb86f3",
-            "imagem": "./assets/alura.png"
+            "link": "https://cursos.alura.com.br/certificate/9135bc6b-be69-4f37-b746-4e8ce9eb86f3",
+            "imagem": "./assets/alura.png",
+            "concluido": 1
         },
 
         {   "Nome": "SqlServer I: Desvendando o Banco de Dados",
             "periodo": "Janeiro/2018 - Janeiro/2018",
-            "certificado": "https://cursos.alura.com.br/certificate/lsimoes1/sqlserver",
-            "imagem": "./assets/alura.png"
+            "link": "https://cursos.alura.com.br/certificate/lsimoes1/sqlserver",
+            "imagem": "./assets/alura.png",
+            "concluido": 1
         },
 
         {   "Nome": "Fundamentos do C# com Clean Code",
             "periodo": "Setembro/2016 - Setembro/2016",
-            "certificado": "https://drive.google.com/file/d/1nzkE51yLl1eKe4Ojeaj6ES9pR0fYZvIV/view",
-            "imagem": "./assets/MVA.png"
+            "link": "https://drive.google.com/file/d/1nzkE51yLl1eKe4Ojeaj6ES9pR0fYZvIV/view",
+            "imagem": "./assets/MVA.png",
+            "concluido": 1
         },
 
         {   "Nome": "HTML5 - Homologado pelo W3C",
             "periodo": "Julho/2014 - Julho/2014",
-            "certificado": "https://drive.google.com/file/d/0B710vaKZ2F37NjJPalg4UUZzeWs/view",
-            "imagem": "./assets/MVA.png"
+            "link": "https://drive.google.com/file/d/0B710vaKZ2F37NjJPalg4UUZzeWs/view",
+            "imagem": "./assets/MVA.png",
+            "concluido": 1
         },
         
         {   "Nome": "Fundamentos do desenvolvimento de software",
             "periodo": "Julho/2014 - Julho/2014",
-            "certificado": "https://drive.google.com/file/d/0B710vaKZ2F37X29HcC1nOXJicE0/view",
-            "imagem": "./assets/MVA.png"
+            "link": "https://drive.google.com/file/d/0B710vaKZ2F37X29HcC1nOXJicE0/view",
+            "imagem": "./assets/MVA.png",
+            "concluido": 1
         }] 
 }
