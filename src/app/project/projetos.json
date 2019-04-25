@@ -21,7 +21,7 @@
         {
             "titulo": "ServiceDesk",
             "descricao": "Sistema de ServiceDesk desenvolvido em Asp.Net com integração ao banco de dados Sql Server. Foi utilizado os framework Materialize e Animated.",
-            "imagem": "./assets/aspnet.png",
+            "imagem": "./assets/aspnetsqlserver.png",
             "url": "https://github.com/lsimoes1/ServiceDesk"
         },
         {
@@ -33,7 +33,7 @@
         {
             "titulo": "Api CRUD",
             "descricao": "Projeto em andamento desenvolvido para estudos. Aplicação que fará inclusão na base de dados MongoDB.",
-            "imagem": "./assets/netcore.png",
+            "imagem": "./assets/netcoremongo.png",
             "url": "https://github.com/lsimoes1/DotNetCoreFormCadAPI"
         },       
         {
