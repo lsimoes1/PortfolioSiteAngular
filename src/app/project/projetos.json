@@ -53,6 +53,12 @@
             "descricao": "Projetos de estudos sobre Python",
             "imagem": "./assets/python.png",
             "url": "https://github.com/lsimoes1/PythonStudying"
+        },
+        {
+            "titulo": "NodeJS",
+            "descricao": "Projetos de estudos sobre Node",
+            "imagem": "./assets/node.png",
+            "url": "https://github.com/lsimoes1/EstudosNodeJs"
         }
     ]
 }
