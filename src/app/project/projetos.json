@@ -41,6 +41,18 @@
             "descricao": "Página desenvolvida em Angular para consumir o projeto 'Api CRUD' que realizará os cadastro no banco.",
             "imagem": "./assets/angular.png",
             "url": "https://github.com/lsimoes1/AngularFormCadWEB"
+        },
+        {
+            "titulo": "Designer Patterns",
+            "descricao": "Projetos de estudos sobre Designe Pattners.",
+            "imagem": "./assets/csharp.png",
+            "url": "https://github.com/lsimoes1/DesignPatternsCSharp"
+        },
+        {
+            "titulo": "Python",
+            "descricao": "Projetos de estudos sobre Python",
+            "imagem": "./assets/python.png",
+            "url": "https://github.com/lsimoes1/PythonStudying"
         }
     ]
 }
