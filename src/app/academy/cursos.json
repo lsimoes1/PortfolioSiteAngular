@@ -27,6 +27,22 @@
         }, 
 
         {
+            "Nome": "Angular parte 1: Fundamentos",
+            "periodo": "",
+            "link": "https://cursos.alura.com.br/course/angular-fundamentos",
+            "imagem": "./assets/alura.png",
+            "concluido": 0
+        }, 
+
+        {
+            "Nome": "Git e contribuições para projetos Open Source",
+            "periodo": "",
+            "link": "https://www.udemy.com/git-e-github/",
+            "imagem": "./assets/udemy.png",
+            "concluido": 0
+        },
+
+        {
             "Nome": "HTML5 E CSS3 II: Turbiando As Suas Páginas",
             "periodo": "Jun/2018 - Out/2018",
             "link": "https://cursos.alura.com.br/certificate/lsimoes1/avancando-html-css",
