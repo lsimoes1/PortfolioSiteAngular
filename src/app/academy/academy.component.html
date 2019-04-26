@@ -2,20 +2,36 @@
 <div class="container text fadeIn">
   <div class="card">
     <div class="card-header">
-      Gradução
+      <span>Gradução</span>
     </div>
-    <div class="card-body">
+    <div class="card-body" *ngFor="let item of cursoGraduacao">
       <blockquote class="blockquote mb-0">
         <div class="row">
           <div class="col-xl-1 col-md-2 col-sm-2 col-4">
             <img class="" src="./assets/unip.jpg" alt="Generic placeholder image">
           </div>
           <div class="col-xl-11 col-md-9 col-sm-9 col-8">
-            <span>Unip - Universidade Paulista</span>
-            <footer class="blockquote-footer">Análise e Desenvolvimento de Sistemas
+            <span> {{ item.Nome }} </span>
+            <footer class="blockquote-footer">
+              <span> {{ item.descricao  }} </span>
               <br> 
               <cite title="Source Title">
-                <span>Jul2017 - Jul/2019</span>
+                <span> {{ item.periodo }} </span>
+                <br>
+                <ng-template
+                  *ngIf="item.concluido; then concluido; else cursando" >
+
+                </ng-template>
+                <ng-template #cursando>
+                  <span> 
+                    <fa name="book" class="text-warning"> </fa> Cursando 
+                  </span>
+                </ng-template>
+                <ng-template #concluido>
+                  <span> 
+                    <fa name="check" class="text-success"> </fa> Concluído
+                  </span>
+                </ng-template>
               </cite>
             </footer>
           </div>
@@ -27,7 +43,7 @@
 
   <div class="card">
     <div class="card-header">
-      Cursos
+      <span>Cursos</span>
     </div>
     <div class="card-body">
       <ul class="list-group list-group-flush">
@@ -42,29 +58,31 @@
                     <img class="" src={{item.imagem}} alt="Generic placeholder image">
                   </div>
                   <div class="col-xl-10 col-md-9 col-sm-9 col-8">
-                    {{ item.Nome }} 
+                    <span> {{ item.Nome }} </span>
                     <ng-template
                       *ngIf="item.concluido; then concluido; else cursando">
                     </ng-template>
                     <ng-template #concluido>
-                      <footer class="blockquote-footer"> {{ item.periodo }} 
+                      <footer class="blockquote-footer"> 
+                        <span> {{ item.periodo }}  </span>
                         <br> 
                           <fa name="check" class="text-success"> </fa> Concluído
                         <br>
                         <cite title="Source Title"> 
                           <a href= {{item.link}} target="_blank">
-                            Certificado
+                            <span> Certificado </span>
                           </a>  
                         </cite>
                       </footer>
                     </ng-template>
                     <ng-template #cursando>
                       <footer class="blockquote-footer">
-                        <fa name="book" class="text-warning"> </fa> Em Andamento 
+                        <fa name="book" class="text-warning"> </fa> 
+                          <span> Cursando </span>
                         <br>
                         <cite title="Source Title">
                           <a href= {{item.link}} target="_blank">
-                              Curso
+                              <span> Curso </span>
                             </a> 
                         </cite>
                       </footer> 
@@ -86,24 +104,28 @@
                     <img class="" src={{item.imagem}} alt="Generic placeholder image">
                   </div>
                   <div class="col-xl-10 col-md-9 col-sm-9 col-8">
-                    {{ item.Nome }} 
-                    <footer class="blockquote-footer" *ngIf="item.concluido; else cursando"> {{ item.periodo }} 
+                    <span> {{ item.Nome }} </span>
+                    <footer class="blockquote-footer" *ngIf="item.concluido; else cursando"> 
+                      <span> {{ item.periodo }} </span>
                       <br> 
-                        <fa name="check" class="text-success"> </fa> Concluído
+                        <fa name="check" class="text-success"> </fa> 
+                        <span> Concluído </span>
                       <br>
                       <cite title="Source Title"> 
                         <a href= {{item.link}} target="_blank">
-                          Certificado
+                          <span> Certificado </span>
                         </a>  
                       </cite>
                     </footer>
                     <ng-template #cursando>
                       <footer class="blockquote-footer">
-                          <fa name="book" class="text-warning"> </fa> Em Andamento 
+                          <span> 
+                            <fa name="book" class="text-warning"> </fa> Cursando 
+                          </span>
                           <br>
                           <cite title="Source Title">
                             <a href= {{item.link}} target="_blank">
-                                Curso
+                                <span> Curso </span>
                               </a> 
                           </cite>
                       </footer> 

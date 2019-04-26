@@ -14,5 +14,6 @@ export class AcademyComponent {
 
   cursosTI = data.cursosTI;
   cursoIdiomas = data.cursosIdiomas;
+  cursoGraduacao = data.graduacao;
   
 }

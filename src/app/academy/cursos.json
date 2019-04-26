@@ -1,4 +1,15 @@
 {
+    "graduacao": [
+        {
+            "Nome": "UNIP - Universidade Paulista",
+            "descricao": "Análise e Desenvolvimento de Sistemas",
+            "periodo": "Jul2017 - Jul/2019",
+            "link": false,
+            "imagem": "./assets/unip.jpg",
+            "concluido": 0
+        }
+    ],
+    
     "cursosIdiomas": [
         {
             "Nome": "Curso De Inglês Completo- Do Zero à Falante Avançado",
