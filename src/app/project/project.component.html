@@ -7,9 +7,20 @@
           <h5 class="card-title">{{ item.titulo }}</h5>
           <p class="card-text ">{{ item.descricao }}</p>
         </div>
-        <div class="d-flex justify-content-end">
-          <a href="{{ item.url }}" target="_blank" class="btn btn-dark">GitHub</a>
-        </div>
+        <ng-template 
+          *ngIf="item.website; then website; else gitonly" >
+        </ng-template>
+        <ng-template #website>
+          <div class="d-flex justify-content-around">
+            <a href="{{ item.website }}" target="_blank" class="btn btn-dark">Site</a>
+            <a href="{{ item.github }}" target="_blank" class="btn btn-dark">GitHub</a>
+          </div>
+        </ng-template>
+        <ng-template #gitonly>
+          <div class="d-flex justify-content-end">
+            <a href="{{ item.github }}" target="_blank" class="btn btn-dark">GitHub</a>
+          </div>
+        </ng-template>
       </div>
     </div>
   </div>

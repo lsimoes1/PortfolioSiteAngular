@@ -43,25 +43,30 @@
                   </div>
                   <div class="col-xl-10 col-md-9 col-sm-9 col-8">
                     {{ item.Nome }} 
-                    <footer class="blockquote-footer" *ngIf="item.concluido; else cursando"> {{ item.periodo }} 
-                      <br> 
-                        <fa name="check" class="text-success"> </fa> Concluído
-                      <br>
-                      <cite title="Source Title"> 
-                        <a href= {{item.link}} target="_blank">
-                          Certificado
-                        </a>  
-                      </cite>
-                    </footer>
+                    <ng-template
+                      *ngIf="item.concluido; then concluido; else cursando">
+                    </ng-template>
+                    <ng-template #concluido>
+                      <footer class="blockquote-footer"> {{ item.periodo }} 
+                        <br> 
+                          <fa name="check" class="text-success"> </fa> Concluído
+                        <br>
+                        <cite title="Source Title"> 
+                          <a href= {{item.link}} target="_blank">
+                            Certificado
+                          </a>  
+                        </cite>
+                      </footer>
+                    </ng-template>
                     <ng-template #cursando>
                       <footer class="blockquote-footer">
-                          <fa name="book" class="text-warning"> </fa> Em Andamento 
-                          <br>
-                          <cite title="Source Title">
-                            <a href= {{item.link}} target="_blank">
-                                Curso
-                              </a> 
-                          </cite>
+                        <fa name="book" class="text-warning"> </fa> Em Andamento 
+                        <br>
+                        <cite title="Source Title">
+                          <a href= {{item.link}} target="_blank">
+                              Curso
+                            </a> 
+                        </cite>
                       </footer> 
                     </ng-template>
                   </div>
