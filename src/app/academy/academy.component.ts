@@ -13,6 +13,6 @@ import data from './cursos.json';
 export class AcademyComponent {
 
   cursosTI = data.cursosTI;
-  cursosEstrangeiros = data.cursosEstrangeiros;
+  cursoIdiomas = data.cursosIdiomas;
   
 }
