@@ -3,7 +3,7 @@
         {
             "Nome": "UNIP - Universidade Paulista",
             "descricao": "Análise e Desenvolvimento de Sistemas",
-            "periodo": "Jul2017 - Jul/2019",
+            "periodo": "Jul/2017 - Jul/2019",
             "link": false,
             "imagem": "./assets/unip.jpg",
             "concluido": 0
@@ -12,11 +12,11 @@
     
     "cursosIdiomas": [
         {
-            "Nome": "Curso De Inglês Completo- Do Zero à Falante Avançado",
-            "periodo": "",
-            "link": "https://www.udemy.com/cursodeingles-iniciantes/",
+            "Nome": "Curso De Inglês Completo - Do Zero à Falante Avançado",
+            "periodo": "Mar/2019 - Maio/2019",
+            "link": "https://drive.google.com/open?id=1AQUWtvC8HTLUGQ6gutU3P_xthGl4RjV5",
             "imagem": "./assets/udemy.png",
-            "concluido": 0
+            "concluido": 1
         }
     ],
 
