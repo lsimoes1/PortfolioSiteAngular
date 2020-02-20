@@ -1,12 +1,12 @@
 {
     "graduacao": [
         {
-            "Nome": "UNIP - Universidade Paulista",
-            "descricao": "Análise e Desenvolvimento de Sistemas",
+            "Nome": "Análise e Desenvolvimento de Sistemas",
+            "descricao": "UNIP - Universidade Paulista",
             "periodo": "Jul/2017 - Jul/2019",
             "link": false,
             "imagem": "./assets/unip.jpg",
-            "concluido": 0
+            "concluido": 1
         }
     ],
     
@@ -38,12 +38,20 @@
         }, 
 
         {
-            "Nome": "Angular parte 1: Fundamentos",
+            "Nome": "Java completo 2020 Programação Orientada a Objetos",
             "periodo": "",
-            "link": "https://cursos.alura.com.br/course/angular-fundamentos",
-            "imagem": "./assets/alura.png",
+            "link": "https://www.udemy.com/course/java-curso-completo/",
+            "imagem": "./assets/udemy.png",
             "concluido": 0
         }, 
+
+        {
+            "Nome": "Java Parte 1: Primeiro Passos",
+            "periodo": "Fev/2020 - Fev/2020",
+            "link": "https://cursos.alura.com.br/certificate/luan-simoes/java-primeiros-passos",
+            "imagem": "./assets/alura.png",
+            "concluido": 1
+        },
 
         {
             "Nome": "Git e contribuições para projetos Open Source",
