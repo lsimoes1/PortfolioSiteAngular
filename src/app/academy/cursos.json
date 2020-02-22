@@ -26,7 +26,8 @@
             "periodo": "",
             "link": "https://www.udemy.com/linux-academy-devops-essentials/",
             "imagem": "./assets/udemy.png",
-            "concluido": 0
+            "concluido": 0,
+            "linguagem": "Outros"
         },
 
         {
@@ -34,7 +35,9 @@
             "periodo": "",
             "link": "https://www.udemy.com/the-complete-guide-to-angular-2/",
             "imagem": "./assets/udemy.png",
-            "concluido": 0
+            "concluido": 0,
+            "linguagem": "Angular"
+
         }, 
 
         {
@@ -42,7 +45,18 @@
             "periodo": "",
             "link": "https://www.udemy.com/course/java-curso-completo/",
             "imagem": "./assets/udemy.png",
-            "concluido": 0
+            "concluido": 0,
+            "linguagem": "Java"
+
+        }, 
+
+        {
+            "Nome": "Java Parte 2: Introdução à Orientação a Objetos",
+            "periodo": "",
+            "link": "https://cursos.alura.com.br/user/luan-simoes/course/java-introducao-orientacao-objetos/certificate",
+            "imagem": "./assets/alura.png",
+            "concluido": 0,
+            "linguagem": "Java"
         }, 
 
         {
@@ -50,7 +64,8 @@
             "periodo": "Fev/2020 - Fev/2020",
             "link": "https://cursos.alura.com.br/certificate/luan-simoes/java-primeiros-passos",
             "imagem": "./assets/alura.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "Java"
         },
 
         {
@@ -58,7 +73,8 @@
             "periodo": "Mar/2019 - Mar/2019",
             "link": "https://www.udemy.com/git-e-github/",
             "imagem": "./assets/udemy.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "Outros"
         },
 
         {
@@ -66,7 +82,9 @@
             "periodo": "Jun/2018 - Out/2018",
             "link": "https://cursos.alura.com.br/certificate/lsimoes1/avancando-html-css",
             "imagem": "./assets/alura.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "Web"
+
         }, 
 
         {
@@ -74,48 +92,55 @@
             "periodo": "Maio/2018 - Maio/2018",
             "link": "https://cursos.alura.com.br/user/lsimoes1/course/fundamentos-de-csharp/certificate",
             "imagem": "./assets/alura.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "C#"
         }, 
 
         {   "Nome": "Design Patterns C# I: Boas Práticas de Programação",
             "periodo": "Dezembro/2017 - Janeiro/2018",
             "link": "https://cursos.alura.com.br/user/lsimoes1/course/design-patterns-dotnet/certificate",
             "imagem": "./assets/alura.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "C#"
         },
 
         {   "Nome": "HTML5 e CSS3 I",
             "periodo": "Dezembro/2017 - Janeiro/2018",
             "link": "https://cursos.alura.com.br/certificate/9135bc6b-be69-4f37-b746-4e8ce9eb86f3",
             "imagem": "./assets/alura.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "Web"
         },
 
         {   "Nome": "SqlServer I: Desvendando o Banco de Dados",
             "periodo": "Janeiro/2018 - Janeiro/2018",
             "link": "https://cursos.alura.com.br/certificate/lsimoes1/sqlserver",
             "imagem": "./assets/alura.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "SQL"
         },
 
         {   "Nome": "Fundamentos do C# com Clean Code",
             "periodo": "Setembro/2016 - Setembro/2016",
             "link": "https://drive.google.com/file/d/1nzkE51yLl1eKe4Ojeaj6ES9pR0fYZvIV/view",
             "imagem": "./assets/MVA.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "C#"
         },
 
         {   "Nome": "HTML5 - Homologado pelo W3C",
             "periodo": "Julho/2014 - Julho/2014",
             "link": "https://drive.google.com/file/d/0B710vaKZ2F37NjJPalg4UUZzeWs/view",
             "imagem": "./assets/MVA.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "Web"
         },
         
         {   "Nome": "Fundamentos do desenvolvimento de software",
             "periodo": "Julho/2014 - Julho/2014",
             "link": "https://drive.google.com/file/d/0B710vaKZ2F37X29HcC1nOXJicE0/view",
             "imagem": "./assets/MVA.png",
-            "concluido": 1
+            "concluido": 1,
+            "linguagem": "Outros"
         }] 
 }
