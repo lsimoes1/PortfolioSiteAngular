@@ -1,18 +1,25 @@
 {
     "projetos": [
         {
-            "titulo": "Portfólio - Angular",
-            "descricao": "Site desenvolvido em Angular, utilizando o framework Bootstrap. No caso, esse é o projeto deste próprio site.",
+            "titulo": "Site Angular - Elite da Estrada MC",
+            "descricao": "Site desenvolvido em Angular, utilizando o framework Materialize. É um website estático de um MotoClube contendo sua história, integrantes e etc.",
             "imagem": "./assets/angular.png",
             "github": "https://github.com/lsimoes1/PortfolioSiteAngular",
-            "website": false
+            "website": "https://elitemc.vercel.app"
+        },
+        {
+            "titulo": "Portfólio - Angular",
+            "descricao": "Site desenvolvido em Angular, utilizando o framework Materialize. No caso, esse é o projeto deste próprio site.",
+            "imagem": "./assets/angular.png",
+            "github": "https://github.com/lsimoes1/PortfolioSiteAngular",
+            "website": "https://portfolio-site-angular.vercel.app"
         },
         {
             "titulo": "Portfólio - WebSite",
             "descricao": "Site desenvolvido para prática em HTML, CSS e JavaScript, utilizando os frameworks Materialize, Jquery e Animated.",
             "imagem": "./assets/html.png",
             "github": "https://github.com/lsimoes1/PortfolioSite",
-            "website": "http://www.lsimoes.com.br"
+            "website": false
         },
         {
             "titulo": "Locação de automóveis",

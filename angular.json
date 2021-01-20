@@ -21,7 +21,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/app/resources"             
+              "src/app/resources"
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -139,5 +139,8 @@
       }
     }
   },
-  "defaultProject": "PortfolioSiteAngular"
+  "defaultProject": "PortfolioSiteAngular",
+  "cli": {
+    "analytics": false
+  }
 }
