@@ -2,6 +2,7 @@ import { GithubService } from './../services/github.service';
 import { Component, OnInit } from '@angular/core';
 import sortBy from 'sort-by'
 
+
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
@@ -10,15 +11,20 @@ import sortBy from 'sort-by'
 export class ProjectComponent implements OnInit {
 
   projetos: Array<any>;
+  loading = true;
+
 
   constructor(private GithubService: GithubService ){}
 
   ngOnInit(){
-    this.getRepository();
+   this.getRepository();
   }
 
   getRepository(){
-    this.GithubService.getRepo().subscribe(response => this.projetos = response.sort(sortBy('-updated_at')));
+    this.GithubService.getRepo().subscribe((response) => {
+      this.projetos = response.sort(sortBy('-updated_at'));
+      this.loading = false;
+    }); 
   };
   
 }

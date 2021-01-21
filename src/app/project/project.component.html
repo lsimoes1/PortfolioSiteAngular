@@ -1,29 +1,42 @@
 <div class="container text">
-  <div class="row">
-    <div class="col-xl-3 col-md-6 col-sm-12 col-12 d-flex align-items-stretch" *ngFor="let item of projetos">
-      <div class="card fadeIn" style="width: 19rem;" >
-        <!-- <img class="card-img-top rounded" src="{{ item.imagem }}" alt="Card image cap"> -->
-        <div class="card-body">
-          <h4 class="card-title"><b>{{ item.name }}</b></h4>
-          <p class="card-text ">Description: <b>{{ item.description }}</b></p>
-          <p class="card-text ">Language: <b>{{ item.language }}</b></p>
-          <p class="card-text ">Last Update: <b>{{ item.updated_at | date : 'dd/MM/yyyy HH:MM'}}</b></p>
+  
+    
+    <ng-template *ngIf="loading; then load; else loaded"></ng-template>
+    <ng-template #load>
+      <div class="row justify-content-center">
+        <div class="col-xl-2 col-md-2 col-3">
+          <img src="../../assets/loading.svg">
         </div>
-        <ng-template 
-          *ngIf="item.homepage; then website; else gitonly" >
-        </ng-template>
-        <ng-template #website>
-          <div class="d-flex justify-content-around">
-            <a href="{{ item.homepage }}" target="_blank" class="btn btn-dark">Site</a>
-            <a href="{{ item.html_url }}" target="_blank" class="btn btn-dark">GitHub</a>
+     </div>
+    </ng-template>
+    
+    <ng-template #loaded>
+      <div class="row">
+        <div class="col-xl-3 col-md-6 col-sm-12 col-12 d-flex align-items-stretch" *ngFor="let item of projetos">
+          <div class="card fadeIn" style="width: 19rem;"  >
+            <!-- <img class="card-img-top rounded" src="{{ item.imagem }}" alt="Card image cap"> -->
+            <div class="card-body">
+              <h4 class="card-title"><b>{{ item.name }}</b></h4>
+              <p class="card-text ">Description: <b>{{ item.description }}</b></p>
+              <p class="card-text ">Language: <b>{{ item.language }}</b></p>
+              <p class="card-text ">Last Update: <b>{{ item.updated_at | date : 'dd/MM/yyyy HH:MM'}}</b></p>
+            </div>
+            <ng-template 
+              *ngIf="item.homepage; then website; else gitonly" >
+            </ng-template>
+            <ng-template #website>
+              <div class="d-flex justify-content-around">
+                <a href="{{ item.homepage }}" target="_blank" class="btn btn-dark">Site</a>
+                <a href="{{ item.html_url }}" target="_blank" class="btn btn-dark">GitHub</a>
+              </div>
+            </ng-template>
+            <ng-template #gitonly>
+              <div class="d-flex justify-content-end">
+                <a href="{{ item.github }}" target="_blank" class="btn btn-dark">GitHub</a>
+              </div>
+            </ng-template>
           </div>
-        </ng-template>
-        <ng-template #gitonly>
-          <div class="d-flex justify-content-end">
-            <a href="{{ item.github }}" target="_blank" class="btn btn-dark">GitHub</a>
-          </div>
-        </ng-template>
+        </div>
       </div>
-    </div>
+    </ng-template>
   </div>
-</div>

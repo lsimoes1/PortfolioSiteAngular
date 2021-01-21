@@ -17,7 +17,11 @@ export class GithubService {
   }
 
   getRepo(): Observable<any[]>{
-    return this,this.httpClient.get<any[]>(this.url);
+    return this.httpClient.get<any[]>(this.url);
+  }
+
+  getCommit(url: string): Observable<string>{
+    return this.httpClient.get<string>(url);
   }
 
 }
