@@ -12,8 +12,7 @@ export class ProjectComponent implements OnInit {
 
   projetos: Array<any>;
   loading = true;
-
-
+  
   constructor(private GithubService: GithubService ){}
 
   ngOnInit(){
@@ -27,7 +26,4 @@ export class ProjectComponent implements OnInit {
     }); 
   };
   
-}
-function compare(a,b){
-  return a.updated_at < b.updated_at;
 }
