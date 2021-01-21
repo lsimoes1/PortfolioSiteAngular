@@ -1,13 +1,27 @@
+import { GithubService } from './../services/github.service';
 import { Component, OnInit } from '@angular/core';
-import data from "./projetos.json";
+import sortBy from 'sort-by'
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css']
 })
-export class ProjectComponent {
+export class ProjectComponent implements OnInit {
 
-  projetos = data.projetos;
+  projetos: Array<any>;
 
+  constructor(private GithubService: GithubService ){}
+
+  ngOnInit(){
+    this.getRepository();
+  }
+
+  getRepository(){
+    this.GithubService.getRepo().subscribe(response => this.projetos = response.sort(sortBy('-updated_at')));
+  };
+  
+}
+function compare(a,b){
+  return a.updated_at < b.updated_at;
 }

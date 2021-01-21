@@ -8,6 +8,7 @@ import { WorkComponent } from './work/work.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AcademyComponent } from './academy/academy.component';
 import { ProjectComponent } from './project/project.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { ProjectComponent } from './project/project.component';
     BrowserModule,
     AppRoutingModule,
     AngularFontAwesomeModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
