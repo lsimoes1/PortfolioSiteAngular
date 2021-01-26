@@ -4,7 +4,7 @@
 }
 
 .card {
-    transition: .5s;
+    transition: all linear .5s;
     margin-bottom: 1em;
 }
 .card:hover {

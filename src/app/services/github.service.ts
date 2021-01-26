@@ -1,27 +1,59 @@
+import { GitRepository } from './../models/git-repository';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { retry, catchError } from 'rxjs/operators';
+import { catchError } from 'rxjs/operators';
+import { of, Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import { Observable, throwError  } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
 
-  url = 'https://api.github.com/users/lsimoes1/repos';
+  url = 'http://localhost:55526/api/github';
+  urlGetToken = 'http://localhost:55526/api/authtoken';
+  
+  body = {
+    "UserID": "usuario01",
+    "AccessKey": "94be650011cf412ca906fc335f615cdc"
+  }
+
+  errorMsg:string;
 
   constructor(private httpClient: HttpClient) { }
 
-  httpOtions = {
-    headers: new HttpHeaders({'Content-Type': 'application/json'})
+  getAuthToken(): Observable<any>{
+    var header = { 
+      headers:new HttpHeaders()
+    .set("Access-Control-Allow-Origin", "*")
+    .set("Access-Control-Allow-Origin", "*")
+    .set("Access-Control-Allow-Origin", "*")
+    .set("Access-Control-Allow-Methods", "PUT,GET,POST,DELETE")
+    .set("Access-Control-Allow-Headers", "Origin, Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers")
+    }
+    return this.httpClient.post<any>(this.urlGetToken, this.body, header);
   }
 
-  getRepo(): Observable<any[]>{
-    return this.httpClient.get<any[]>(this.url);
+  getRepo(token: string): Observable<GitRepository[]>{
+    
+    var hd = {
+      headers: new HttpHeaders()
+        .set("Authorization", "Bearer " + token)
+     }; 
+    return this.httpClient.get<GitRepository[]>(this.url, hd).pipe(
+      catchError(error => {
+        if(error.error instanceof ErrorEvent){
+          this.errorMsg = 'Error ${error.error.message}'
+        }
+        else {
+          this.errorMsg = `Error: ${error.message}`;
+        }
+        console.log(this.errorMsg);
+        return of([]);
+      }));
   }
 
   getCommit(url: string): Observable<string>{
     return this.httpClient.get<string>(url);
   }
-
 }
+
