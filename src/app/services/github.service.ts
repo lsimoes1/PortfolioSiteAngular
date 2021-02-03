@@ -1,14 +1,14 @@
 import { GitRepository } from './../models/git-repository';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { retry, catchError, map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
-import { Observable, pipe, throwError, of } from 'rxjs';
-import Swal from 'sweetalert2/dist/sweetalert2.js';  
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
+  
 
   // url = 'http://localhost:55526/api/github';
   url = "https://portfolioapisite.herokuapp.com/api/github";

@@ -4,7 +4,7 @@ export interface infoAcademy {
     Nome: string;
     Descricao:string;
     Tipo:string;
-    Periodo:string;
+    DataConclusao:string;
     Link:string;
     Imagem:string;
     Concluido:boolean;

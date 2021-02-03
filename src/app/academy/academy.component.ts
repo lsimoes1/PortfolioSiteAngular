@@ -1,7 +1,9 @@
+import sortBy from 'sort-by'
 import { infoAcademy } from './../models/infoAcademy';
 import { AcademyService } from './../services/academy.service';
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2/dist/sweetalert2.js'; 
+
 
 @Component({
   selector: 'app-academy',
@@ -14,6 +16,7 @@ export class AcademyComponent implements OnInit {
   cursosTI:Array<infoAcademy> = [];
   cursoIdiomas:Array<infoAcademy> = [];
   cursoGraduacao:Array<infoAcademy> = [];
+  academy:Array<infoAcademy> = [];
   loading = true;
 
   constructor(private AcademyService: AcademyService) { }
@@ -25,9 +28,9 @@ export class AcademyComponent implements OnInit {
   getInfoAcademy(){
     this.AcademyService.getAuthToken().subscribe((token) => {
       this.AcademyService.getInfoAcademy(token.accessToken).subscribe((response) => {
-        
+        this.academy = response.sort(sortBy("Concluido")).sort(sortBy("-DataConclusao"))
         try {
-          response.forEach(element =>{
+          this.academy.forEach(element =>{
             if(element.Tipo == "1"){
               this.cursoGraduacao.push(element);
             }

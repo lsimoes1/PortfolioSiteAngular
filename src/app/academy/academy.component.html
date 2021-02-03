@@ -27,7 +27,7 @@
                 <span> {{ item.Descricao  }} </span>
                 <br> 
                 <cite title="Source Title">
-                  <span> {{ item.Periodo }} </span>
+                  <span>Data Conclusão: {{ item.DataConclusao | date : 'dd/MM/yyyy' }} </span>
                   <br>
                   <ng-template
                     *ngIf="item.Concluido; then concluido; else cursando" >
@@ -75,7 +75,7 @@
                       </ng-template>
                       <ng-template #concluido>
                         <footer class="blockquote-footer"> 
-                          <span> {{ item.Periodo }}  </span>
+                          <span>Data Conclusão: {{ item.DataConclusao | date : 'dd/MM/yyyy' }}  </span>
                           <br> 
                             <fa name="check" class="text-success"> </fa> Concluído
                           <br>
@@ -117,7 +117,7 @@
                     <div class="col-xl-10 col-md-9 col-sm-9 col-8">
                       <span> {{ item.Nome }} </span>
                       <footer class="blockquote-footer" *ngIf="item.Concluido; else cursando"> 
-                        <span> {{ item.Periodo }} </span>
+                        <span>Data Conclusão: {{ item.DataConclusao | date : 'dd/MM/yyyy' }} </span>
                         <br> 
                           <fa name="check" class="text-success"> </fa> 
                           <span> Concluído </span>
