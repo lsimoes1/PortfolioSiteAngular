@@ -15,3 +15,13 @@
   <app-root></app-root>
 </body>
 </html>
+<script>
+   function closeNav(){
+    $("#btnNavBar").click();
+  };
+  $(document).ready(() => {
+    if(window.matchMedia("(max-width: 767px)").matches){
+      $(".nav-link").click(() => closeNav());
+    }
+  });
+</script>
