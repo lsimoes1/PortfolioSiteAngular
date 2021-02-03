@@ -1,8 +1,9 @@
 import { GitRepository } from './../models/git-repository';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { catchError } from 'rxjs/operators';
-import { of, Observable } from 'rxjs';
+import { retry, catchError, map } from 'rxjs/operators';
 import { Injectable } from '@angular/core';
+import { Observable, pipe, throwError  } from 'rxjs';
+import Swal from 'sweetalert2/dist/sweetalert2.js';  
 
 @Injectable({
   providedIn: 'root'
