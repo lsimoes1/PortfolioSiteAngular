@@ -1,6 +1,11 @@
 import { GithubService } from './../services/github.service';
 import { Component, OnInit } from '@angular/core';
 import sortBy from 'sort-by'
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { retry } from 'rxjs/internal/operators/retry';
+import { catchError } from 'rxjs/internal/operators/catchError';
+import Swal from 'sweetalert2/dist/sweetalert2.js'; 
 
 
 @Component({
@@ -8,22 +13,30 @@ import sortBy from 'sort-by'
   templateUrl: './project.component.html',
   styleUrls: ['./project.component.css']
 })
+
 export class ProjectComponent implements OnInit {
 
   projetos: Array<any>;
   loading = true;
-  
-  constructor(private GithubService: GithubService ){}
+
+  constructor(private GithubService: GithubService) { }
 
   ngOnInit(){
-   this.getRepository();
+    this.getRepository();
   }
 
   getRepository(){
     this.GithubService.getRepo().subscribe((response) => {
       this.projetos = response.sort(sortBy('-updated_at'));
       this.loading = false;
-    }); 
+    },
+    err => {
+      Swal.fire({  
+        icon: 'error',  
+        title: 'Oops...',  
+        text: err.message,  
+      });
+      this.loading = false;
+    })
   };
-  
 }
