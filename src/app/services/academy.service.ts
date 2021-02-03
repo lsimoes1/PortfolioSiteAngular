@@ -2,6 +2,7 @@ import { Observable, of } from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError } from 'rxjs/operators';
+import { infoAcademy } from '../models/infoAcademy';
 
 
 @Injectable({
@@ -20,12 +21,12 @@ export class AcademyService {
   
   constructor(private httpClient: HttpClient) { }
 
-  getInfoAcademy(token: string): Observable<any[]>{
+  getInfoAcademy(token: string): Observable<infoAcademy[]>{
     var hd = {
       headers: new HttpHeaders()
         .set("Authorization", "Bearer " + token)
      }; 
-    return this.httpClient.get<any[]>(this.url, hd);
+    return this.httpClient.get<infoAcademy[]>(this.url, hd);
   }
 
   getAuthToken(): Observable<any>{

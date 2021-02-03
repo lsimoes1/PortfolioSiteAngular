@@ -1,142 +1,154 @@
 
-<div class="container text fadeIn">
-  <div class="card">
-    <div class="card-header">
-      <span>Gradução</span>
-    </div>
-    <div class="card-body" *ngFor="let item of cursoGraduacao">
-      <blockquote class="blockquote mb-0">
-        <div class="row">
-          <div class="col-xl-1 col-md-2 col-sm-2 col-4">
-            <img class="" src="./assets/unip.jpg" alt="Generic placeholder image">
-          </div>
-          <div class="col-xl-11 col-md-9 col-sm-9 col-8">
-            <span> {{ item.Nome }} </span>
-            <footer class="blockquote-footer">
-              <span> {{ item.descricao  }} </span>
-              <br> 
-              <cite title="Source Title">
-                <span> {{ item.periodo }} </span>
-                <br>
-                <ng-template
-                  *ngIf="item.concluido; then concluido; else cursando" >
-
-                </ng-template>
-                <ng-template #cursando>
-                  <span> 
-                    <fa name="book" class="text-warning"> </fa> Cursando 
-                  </span>
-                </ng-template>
-                <ng-template #concluido>
-                  <span> 
-                    <fa name="check" class="text-success"> </fa> Concluído
-                  </span>
-                </ng-template>
-              </cite>
-            </footer>
-          </div>
+<div class="container text">
+  <ng-template *ngIf="loading; then load; else loaded"></ng-template>
+  <ng-template #load>
+    <div class="row justify-content-center">
+      <div class="col-xl-1 col-md-1 col-3">
+        <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+          <span class="sr-only">Loading...</span>
         </div>
-      </blockquote>
+      </div>
     </div>
-  </div>
-
-
-  <div class="card">
-    <div class="card-header">
-      <span>Cursos</span>
-    </div>
-    <div class="card-body">
-      <ul class="list-group list-group-flush">
-
-        <li class="list-group-item">
-          <h3>Tecnologia</h3>
+  </ng-template>
+  <ng-template #loaded>
+    <div class="card fadeIn">
+      <div class="card-header">
+        <span>Gradução</span>
+      </div>
+      <div class="card-body" *ngFor="let item of cursoGraduacao">
+        <blockquote class="blockquote mb-0">
           <div class="row">
-            <div class="col-xl-6 col-md-6 col-sm-6 col-12" *ngFor="let item of cursosTI">
-              <blockquote class="blockquote mb-0">
-                <div class="row separete" >
-                  <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
-                    <img class="" src={{item.imagem}} alt="Generic placeholder image">
+            <div class="col-xl-1 col-md-2 col-sm-2 col-4">
+              <img class="" src="./assets/unip.jpg" alt="Generic placeholder image">
+            </div>
+            <div class="col-xl-11 col-md-9 col-sm-9 col-8">
+              <span> {{ item.Nome }} </span>
+              <footer class="blockquote-footer">
+                <span> {{ item.Descricao  }} </span>
+                <br> 
+                <cite title="Source Title">
+                  <span> {{ item.Periodo }} </span>
+                  <br>
+                  <ng-template
+                    *ngIf="item.Concluido; then concluido; else cursando" >
+
+                  </ng-template>
+                  <ng-template #cursando>
+                    <span> 
+                      <fa name="book" class="text-warning"> </fa> Cursando 
+                    </span>
+                  </ng-template>
+                  <ng-template #concluido>
+                    <span> 
+                      <fa name="check" class="text-success"> </fa> Concluído
+                    </span>
+                  </ng-template>
+                </cite>
+              </footer>
+            </div>
+          </div>
+        </blockquote>
+      </div>
+    </div>
+
+
+    <div class="card fadeIn">
+      <div class="card-header">
+        <span>Cursos</span>
+      </div>
+      <div class="card-body">
+        <ul class="list-group list-group-flush">
+
+          <li class="list-group-item">
+            <h3>Tecnologia</h3>
+            <div class="row">
+              <div class="col-xl-6 col-md-6 col-sm-6 col-12" *ngFor="let item of cursosTI">
+                <blockquote class="blockquote mb-0">
+                  <div class="row separete" >
+                    <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
+                      <img class="" src={{item.Imagem}} alt="Generic placeholder image">
+                    </div>
+                    <div class="col-xl-10 col-md-9 col-sm-9 col-8">
+                      <span> {{ item.Nome }} </span>
+                      <ng-template
+                        *ngIf="item.Concluido; then concluido; else cursando">
+                      </ng-template>
+                      <ng-template #concluido>
+                        <footer class="blockquote-footer"> 
+                          <span> {{ item.Periodo }}  </span>
+                          <br> 
+                            <fa name="check" class="text-success"> </fa> Concluído
+                          <br>
+                          <cite title="Source Title"> 
+                            <a href= {{item.Link}} target="_blank">
+                              <span> Certificado </span>
+                            </a>  
+                          </cite>
+                        </footer>
+                      </ng-template>
+                      <ng-template #cursando>
+                        <footer class="blockquote-footer">
+                          <fa name="book" class="text-warning"> </fa> 
+                            <span> Cursando </span>
+                          <br>
+                          <cite title="Source Title">
+                            <a href= {{item.Link}} target="_blank">
+                                <span> Curso </span>
+                              </a> 
+                          </cite>
+                        </footer> 
+                      </ng-template>
+                    </div>
                   </div>
-                  <div class="col-xl-10 col-md-9 col-sm-9 col-8">
-                    <span> {{ item.Nome }} </span>
-                    <ng-template
-                      *ngIf="item.concluido; then concluido; else cursando">
-                    </ng-template>
-                    <ng-template #concluido>
-                      <footer class="blockquote-footer"> 
-                        <span> {{ item.periodo }}  </span>
+                </blockquote>
+              </div>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <h3>Idiomas</h3>
+            <div class="row">
+              <div class="col-xl-6 col-md-6 col-sm-6 col-12" *ngFor="let item of cursoIdiomas">
+                <blockquote class="blockquote mb-0">
+                  <div class="row separete" >
+                    <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
+                      <img class="" src={{item.Imagem}} alt="Generic placeholder image">
+                    </div>
+                    <div class="col-xl-10 col-md-9 col-sm-9 col-8">
+                      <span> {{ item.Nome }} </span>
+                      <footer class="blockquote-footer" *ngIf="item.Concluido; else cursando"> 
+                        <span> {{ item.Periodo }} </span>
                         <br> 
-                          <fa name="check" class="text-success"> </fa> Concluído
+                          <fa name="check" class="text-success"> </fa> 
+                          <span> Concluído </span>
                         <br>
                         <cite title="Source Title"> 
-                          <a href= {{item.link}} target="_blank">
+                          <a href= {{item.Link}} target="_blank">
                             <span> Certificado </span>
                           </a>  
                         </cite>
                       </footer>
-                    </ng-template>
-                    <ng-template #cursando>
-                      <footer class="blockquote-footer">
-                        <fa name="book" class="text-warning"> </fa> 
-                          <span> Cursando </span>
-                        <br>
-                        <cite title="Source Title">
-                          <a href= {{item.link}} target="_blank">
-                              <span> Curso </span>
-                            </a> 
-                        </cite>
-                      </footer> 
-                    </ng-template>
+                      <ng-template #cursando>
+                        <footer class="blockquote-footer">
+                            <span> 
+                              <fa name="book" class="text-warning"> </fa> Cursando 
+                            </span>
+                            <br>
+                            <cite title="Source Title">
+                              <a href= {{item.Link}} target="_blank">
+                                  <span> Curso </span>
+                                </a> 
+                            </cite>
+                        </footer> 
+                      </ng-template>
+                    </div>
                   </div>
-                </div>
-              </blockquote>
+                </blockquote>
+              </div>
             </div>
-          </div>
-        </li>
-
-        <li class="list-group-item">
-          <h3>Idiomas</h3>
-          <div class="row">
-            <div class="col-xl-6 col-md-6 col-sm-6 col-12" *ngFor="let item of cursoIdiomas">
-              <blockquote class="blockquote mb-0">
-                <div class="row separete" >
-                  <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
-                    <img class="" src={{item.imagem}} alt="Generic placeholder image">
-                  </div>
-                  <div class="col-xl-10 col-md-9 col-sm-9 col-8">
-                    <span> {{ item.Nome }} </span>
-                    <footer class="blockquote-footer" *ngIf="item.concluido; else cursando"> 
-                      <span> {{ item.periodo }} </span>
-                      <br> 
-                        <fa name="check" class="text-success"> </fa> 
-                        <span> Concluído </span>
-                      <br>
-                      <cite title="Source Title"> 
-                        <a href= {{item.link}} target="_blank">
-                          <span> Certificado </span>
-                        </a>  
-                      </cite>
-                    </footer>
-                    <ng-template #cursando>
-                      <footer class="blockquote-footer">
-                          <span> 
-                            <fa name="book" class="text-warning"> </fa> Cursando 
-                          </span>
-                          <br>
-                          <cite title="Source Title">
-                            <a href= {{item.link}} target="_blank">
-                                <span> Curso </span>
-                              </a> 
-                          </cite>
-                      </footer> 
-                    </ng-template>
-                  </div>
-                </div>
-              </blockquote>
-            </div>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
+  </ng-template>
 </div>

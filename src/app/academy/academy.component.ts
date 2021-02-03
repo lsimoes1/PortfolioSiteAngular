@@ -1,10 +1,7 @@
+import { infoAcademy } from './../models/infoAcademy';
 import { AcademyService } from './../services/academy.service';
 import { Component, OnInit } from '@angular/core';
 import Swal from 'sweetalert2/dist/sweetalert2.js'; 
-
-import data from './cursos.json';
-
-// const cursos = data.cursos;
 
 @Component({
   selector: 'app-academy',
@@ -14,10 +11,10 @@ import data from './cursos.json';
 
 export class AcademyComponent implements OnInit {
 
-  cursosTI = data.cursosTI;
-  cursoIdiomas = data.cursosIdiomas;
-  cursoGraduacao = data.graduacao;s
-  loading:boolean;
+  cursosTI:Array<infoAcademy> = [];
+  cursoIdiomas:Array<infoAcademy> = [];
+  cursoGraduacao:Array<infoAcademy> = [];
+  loading = true;
 
   constructor(private AcademyService: AcademyService) { }
 
@@ -25,11 +22,26 @@ export class AcademyComponent implements OnInit {
     this.getInfoAcademy();
   }
 
-
   getInfoAcademy(){
     this.AcademyService.getAuthToken().subscribe((token) => {
       this.AcademyService.getInfoAcademy(token.accessToken).subscribe((response) => {
-        console.log(response)
+        
+        try {
+          response.forEach(element =>{
+            if(element.Tipo == "1"){
+              this.cursoGraduacao.push(element);
+            }
+            else if(element.Tipo == "3"){
+              this.cursoIdiomas.push(element)
+            }
+            else{
+              this.cursosTI.push(element)
+            }
+          })
+        } catch (error) {
+          this.error(error)
+        }  
+        
         this.loading = false;
       },
       err => {
@@ -40,7 +52,7 @@ export class AcademyComponent implements OnInit {
     err => {
       this.error(err.message);
     })
-  }
+  };
 
   error(msg: string){
     Swal.fire({  
@@ -49,5 +61,4 @@ export class AcademyComponent implements OnInit {
       text: msg,  
     });
   }
-
-}
+};

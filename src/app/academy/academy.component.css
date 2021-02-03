@@ -5,17 +5,15 @@ img {
 }
 
 .card {
-    margin-bottom: 2em;
+    transition: all linear .5s!important;
+    margin-bottom: 1em;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
+    border-radius: 5px 5px 5px 5px;
 }
 
 .separete {
     margin-bottom: 2em;
-}
-
-.card {
-    box-shadow: 3px 3px 3px rgba(0, 0, 0, .2);
-    border-radius: 5px 5px 5px 5px;
-}
+} 
 
 .list-group-item > h3 {
     margin-bottom: 1em;
