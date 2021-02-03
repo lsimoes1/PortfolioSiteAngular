@@ -9,7 +9,7 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 })
 export class GithubService {
 
-  url = 'https://ap.github.com/users/lsimoes1/repos';
+  url = 'https://api.github.com/users/lsimoes1/repos';
 
   constructor(private httpClient: HttpClient) { }
 

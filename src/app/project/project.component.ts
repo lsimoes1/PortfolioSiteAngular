@@ -1,10 +1,6 @@
 import { GithubService } from './../services/github.service';
 import { Component, OnInit } from '@angular/core';
 import sortBy from 'sort-by'
-import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { retry } from 'rxjs/internal/operators/retry';
-import { catchError } from 'rxjs/internal/operators/catchError';
 import Swal from 'sweetalert2/dist/sweetalert2.js'; 
 
 
