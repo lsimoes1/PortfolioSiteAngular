@@ -12,7 +12,6 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 
 export class ProjectComponent implements OnInit {
 
-  token:string;
   projetos: Array<any>;
   loading = true;
 
@@ -23,17 +22,27 @@ export class ProjectComponent implements OnInit {
   }
 
   getRepository(){
-    this.GithubService.getRepo().subscribe((response) => {
-      this.projetos = response.sort(sortBy('-updated_at'));
-      this.loading = false;
+    this.GithubService.getAuthToken().subscribe((token) => {
+      this.GithubService.getRepo(token.accessToken).subscribe((response) => {
+        this.projetos = response.sort(sortBy('-updated_at'));
+        this.loading = false;
+      },
+      err => {
+       this.error(err.message);
+        this.loading = false;
+      })
     },
     err => {
-      Swal.fire({  
-        icon: 'error',  
-        title: 'Oops...',  
-        text: err.message,  
-      });
-      this.loading = false;
+      this.error(err.message);
     })
-  };
+    
+  }
+
+  error(msg: string){
+    Swal.fire({  
+      icon: 'error',  
+      title: 'Oops...',  
+      text: msg,  
+    });
+  }
 }
