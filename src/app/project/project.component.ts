@@ -2,15 +2,20 @@ import { GithubService } from './../services/github.service';
 import { Component, OnInit } from '@angular/core';
 import sortBy from 'sort-by'
 import Swal from 'sweetalert2/dist/sweetalert2.js'; 
+import { animate, style, transition, trigger } from '@angular/animations';
+import { listAnimation } from '../listAnimation';
+
 
 
 @Component({
   selector: 'app-project',
   templateUrl: './project.component.html',
-  styleUrls: ['./project.component.css']
+  styleUrls: ['./project.component.css'],
+  animations: [ listAnimation ],
 })
 
-export class ProjectComponent implements OnInit {
+
+export class ProjectComponent implements OnInit {  
 
   projetos: Array<any>;
   loading = true;

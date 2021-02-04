@@ -13,9 +13,9 @@
     </ng-template>
     
     <ng-template #loaded>
-      <div class="row">
-        <div class="col-xl-3 col-md-6 col-sm-12 col-12 d-flex align-items-stretch" *ngFor="let item of projetos">
-          <div class="card fadeIn" style="width: 19rem;"  >
+      <div [@listAnimation]="projetos.length" class="row">
+        <div class="col-xl-3 col-md-6 col-sm-12 col-12 d-flex align-items-stretch" *ngFor="let item of projetos" [@listAnimation]>
+          <div class="card" style="width: 19rem;"  >
             <!-- <img class="card-img-top rounded" src="{{ item.imagem }}" alt="Card image cap"> -->
             <div class="card-body">
               <h4 class="card-title"><b>{{ item.name }}</b></h4>
