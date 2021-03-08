@@ -27,8 +27,7 @@ export class ProjectComponent implements OnInit {
   }
 
   getRepository(){
-    this.GithubService.getAuthToken().subscribe((token) => {
-      this.GithubService.getRepo(token.accessToken).subscribe((response) => {
+      this.GithubService.getRepo().subscribe((response) => {
         this.projetos = response.sort(sortBy('-updated_at'));
         this.loading = false;
       },
@@ -36,12 +35,24 @@ export class ProjectComponent implements OnInit {
        this.error(err.message);
         this.loading = false;
       })
-    },
-    err => {
-      this.error(err.message);
-    })
-    
-  }
+    }
+
+  //DESATIVADO DEVIDO A BAIXA PERFORMANCE NA GERAÇÃO DO TOKEN.
+  // getRepository(){
+  //   this.GithubService.getAuthToken().subscribe((token) => {
+  //     this.GithubService.getRepo(token.accessToken).subscribe((response) => {
+  //       this.projetos = response.sort(sortBy('-updated_at'));
+  //       this.loading = false;
+  //     },
+  //     err => {
+  //      this.error(err.message);
+  //       this.loading = false;
+  //     })
+  //   },
+  //   err => {
+  //     this.error(err.message);
+  //   })    
+  // }
 
   error(msg: string){
     Swal.fire({  

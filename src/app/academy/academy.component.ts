@@ -25,16 +25,16 @@ export class AcademyComponent implements OnInit {
     this.getInfoAcademy();
   }
 
-  getInfoAcademy(){
-    this.AcademyService.getAuthToken().subscribe((token) => {
-      this.AcademyService.getInfoAcademy(token.accessToken).subscribe((response) => {
+    getInfoAcademy(){
+      this.AcademyService.getInfoAcademy().subscribe((response) => {
         this.academy = response.sort(sortBy("Concluido")).sort(sortBy("-DataConclusao"))
         try {
           this.academy.forEach(element =>{
-            if(element.Tipo == "1"){
+            console.log(element)
+            if(element.tipo == "1"){
               this.cursoGraduacao.push(element);
             }
-            else if(element.Tipo == "3"){
+            else if(element.tipo == "3"){
               this.cursoIdiomas.push(element)
             }
             else{
@@ -51,11 +51,39 @@ export class AcademyComponent implements OnInit {
        this.error(err.message);
         this.loading = false;
       })
-    },
-    err => {
-      this.error(err.message);
-    })
-  };
+    }
+
+  // getInfoAcademy(){
+  //   this.AcademyService.getAuthToken().subscribe((token) => {
+  //     this.AcademyService.getInfoAcademy(token.accessToken).subscribe((response) => {
+  //       this.academy = response.sort(sortBy("Concluido")).sort(sortBy("-DataConclusao"))
+  //       try {
+  //         this.academy.forEach(element =>{
+  //           if(element.Tipo == "1"){
+  //             this.cursoGraduacao.push(element);
+  //           }
+  //           else if(element.Tipo == "3"){
+  //             this.cursoIdiomas.push(element)
+  //           }
+  //           else{
+  //             this.cursosTI.push(element)
+  //           }
+  //         })
+  //       } catch (error) {
+  //         this.error(error)
+  //       }  
+        
+  //       this.loading = false;
+  //     },
+  //     err => {
+  //      this.error(err.message);
+  //       this.loading = false;
+  //     })
+  //   },
+  //   err => {
+  //     this.error(err.message);
+  //   })
+  // };
 
   error(msg: string){
     Swal.fire({  

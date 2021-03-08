@@ -22,15 +22,15 @@
               <img class="" src="./assets/unip.jpg" alt="Generic placeholder image">
             </div>
             <div class="col-xl-11 col-md-9 col-sm-9 col-8">
-              <span> {{ item.Nome }} </span>
+              <span> {{ item.nome }} </span>
               <footer class="blockquote-footer">
-                <span> {{ item.Descricao  }} </span>
+                <span> {{ item.descricao  }} </span>
                 <br> 
                 <cite title="Source Title">
-                  <span>Data Conclusão: {{ item.DataConclusao | date : 'dd/MM/yyyy' }} </span>
+                  <span>Data Conclusão: {{ item.dataConclusao | date : 'dd/MM/yyyy' }} </span>
                   <br>
                   <ng-template
-                    *ngIf="item.Concluido; then concluido; else cursando" >
+                    *ngIf="item.concluido; then concluido; else cursando" >
 
                   </ng-template>
                   <ng-template #cursando>
@@ -66,21 +66,21 @@
                 <blockquote class="blockquote mb-0">
                   <div class="row separete" >
                     <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
-                      <img class="" src={{item.Imagem}} alt="Generic placeholder image">
+                      <img class="" src={{item.imagem}} alt="Generic placeholder image">
                     </div>
                     <div class="col-xl-10 col-md-9 col-sm-9 col-8">
-                      <span> {{ item.Nome }} </span>
+                      <span> {{ item.nome }} </span>
                       <ng-template
-                        *ngIf="item.Concluido; then concluido; else cursando">
+                        *ngIf="item.concluido; then concluido; else cursando">
                       </ng-template>
                       <ng-template #concluido>
                         <footer class="blockquote-footer"> 
-                          <span>Data Conclusão: {{ item.DataConclusao | date : 'dd/MM/yyyy' }}  </span>
+                          <span>Data Conclusão: {{ item.dataConclusao | date : 'dd/MM/yyyy' }}  </span>
                           <br> 
                             <fa name="check" class="text-success"> </fa> Concluído
                           <br>
                           <cite title="Source Title"> 
-                            <a href= {{item.Link}} target="_blank">
+                            <a href= {{item.link}} target="_blank">
                               <span> Certificado </span>
                             </a>  
                           </cite>
@@ -92,7 +92,7 @@
                             <span> Cursando </span>
                           <br>
                           <cite title="Source Title">
-                            <a href= {{item.Link}} target="_blank">
+                            <a href= {{item.link}} target="_blank">
                                 <span> Curso </span>
                               </a> 
                           </cite>
@@ -112,18 +112,18 @@
                 <blockquote class="blockquote mb-0">
                   <div class="row separete" >
                     <div class="col-xl-2 col-md-3 col-sm-3 col-4" >
-                      <img class="" src={{item.Imagem}} alt="Generic placeholder image">
+                      <img class="" src={{item.imagem}} alt="Generic placeholder image">
                     </div>
                     <div class="col-xl-10 col-md-9 col-sm-9 col-8">
-                      <span> {{ item.Nome }} </span>
-                      <footer class="blockquote-footer" *ngIf="item.Concluido; else cursando"> 
-                        <span>Data Conclusão: {{ item.DataConclusao | date : 'dd/MM/yyyy' }} </span>
+                      <span> {{ item.nome }} </span>
+                      <footer class="blockquote-footer" *ngIf="item.concluido; else cursando"> 
+                        <span>Data Conclusão: {{ item.dataConclusao | date : 'dd/MM/yyyy' }} </span>
                         <br> 
                           <fa name="check" class="text-success"> </fa> 
                           <span> Concluído </span>
                         <br>
                         <cite title="Source Title"> 
-                          <a href= {{item.Link}} target="_blank">
+                          <a href= {{item.link}} target="_blank">
                             <span> Certificado </span>
                           </a>  
                         </cite>
@@ -135,7 +135,7 @@
                             </span>
                             <br>
                             <cite title="Source Title">
-                              <a href= {{item.Link}} target="_blank">
+                              <a href= {{item.link}} target="_blank">
                                   <span> Curso </span>
                                 </a> 
                             </cite>
