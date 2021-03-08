@@ -30,7 +30,6 @@ export class AcademyComponent implements OnInit {
         this.academy = response.sort(sortBy("Concluido")).sort(sortBy("-DataConclusao"))
         try {
           this.academy.forEach(element =>{
-            console.log(element)
             if(element.tipo == "1"){
               this.cursoGraduacao.push(element);
             }

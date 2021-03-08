@@ -28,7 +28,7 @@ export class ProjectComponent implements OnInit {
 
   getRepository(){
       this.GithubService.getRepo().subscribe((response) => {
-        this.projetos = response.sort(sortBy('-updated_at'));
+        this.projetos = response.sort(sortBy('-lastUpdate'));
         this.loading = false;
       },
       err => {
