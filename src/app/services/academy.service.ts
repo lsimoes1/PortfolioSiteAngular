@@ -11,8 +11,8 @@ import { infoAcademy } from '../models/infoAcademy';
 export class AcademyService {
   errorMsg:string;
   
-  // url = 'http://localhost:55526/api/academy';
-  url = 'https://portfolioapisite.herokuapp.com/api/academy';
+  url = 'http://localhost:55526/api/academy';
+  // url = 'https://portfolioapisite.herokuapp.com/api/academy';
   // urlGetToken = 'https://portfolioapisite.herokuapp.com/api/authtoken';
   
   // body = {

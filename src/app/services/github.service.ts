@@ -11,8 +11,8 @@ import { shareReplay } from 'rxjs/operators';
 export class GithubService {
   
 
-  // url = 'http://localhost:55526/api/github';
-  url = "https://portfolioapisite.herokuapp.com/api/github";
+  url = 'http://localhost:55526/api/github';
+  // url = "https://portfolioapisite.herokuapp.com/api/github";
   // urlGetToken = 'https://portfolioapisite.herokuapp.com/api/authtoken';
   
   // body = {
