@@ -7,7 +7,7 @@ import { Observable } from 'rxjs/internal/Observable';
 })
 export class ProfessionalService {
 
-  url = 'https://portfolioapisite.herokuapp.com/api/professional';
+  url = 'https://portfolioapisite-java.herokuapp.com/api/v1/portfoliosite/professional';
   // url = "http://localhost:55526/api/professional"
   
   constructor(private httpClient: HttpClient) { }
