@@ -12,8 +12,9 @@ export class AcademyService {
   errorMsg:string;
   
   // url = 'http://localhost:55526/api/academy';
-  url = 'https://portfolioapisite-java.herokuapp.com/api/v1/portfoliosite/academy';
+   url = 'https://portfolioapisite-java.herokuapp.com/api/v1/portfoliosite/academy';
   // urlGetToken = 'https://portfolioapisite.herokuapp.com/api/authtoken';
+  // url = "http://localhost:8080/api/v1/portfoliosite/academy"
   
   // body = {
   //   "UserID": "usuario01",

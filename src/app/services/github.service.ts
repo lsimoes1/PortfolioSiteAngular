@@ -12,8 +12,9 @@ export class GithubService {
   
 
   // url = 'http://localhost:55526/api/github';
-  url = "https://portfolioapisite-java.herokuapp.com/api/v1/github/repository";
+   url = "https://portfolioapisite-java.herokuapp.com/api/v1/github/repository";
   // urlGetToken = 'https://portfolioapisite.herokuapp.com/api/authtoken';
+  // url = "http://localhost:8080/api/v1/github/repository"
   
   // body = {
   //   "UserID": "usuario01",
